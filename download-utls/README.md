@@ -22,3 +22,47 @@ python -m venv env
 env\Scripts\activate
 # On MacOS/Linux
 source env/bin/activate
+```
+
+## Scripts Overview
+
+### 1. `download_archive_collection.py`
+
+This script downloads all items from a specified collection in Archive.org.
+
+**Usage:**
+```bash
+python download_archive_collection.py <collection_identifier>
+```
+- `<collection_identifier>`: The unique identifier for the collection you wish to download.
+
+### 2. `download_archive_collection_types.py`
+
+This script offers more control over the download process, allowing you to specify file formats and other parameters.
+
+**Usage:**
+```bash
+python download_archive_collection_types.py <collection_id> <formats> [options]
+```
+
+**Parameters:**
+- `collection_id`: Identifier of the collection to download. This is the unique handle on Archive.org for the collection.
+- `formats`: Comma-separated list of preferred formats to download (e.g., pdf, epub).
+
+**Options:**
+- `--max_workers`: Maximum number of concurrent downloads; default is 5.
+- `-o`, `--output`: Specify the directory where downloaded files should be saved; default is `./downloads`.
+- `-v`, `--verbose`: Enable verbose output to increase logging detail, helpful for debugging.
+
+## Example Command
+```bash
+python download_archive_collection_types.py mycollection pdf,epub --max_workers 10 -o ~/downloads -v
+```
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
