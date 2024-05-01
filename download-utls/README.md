@@ -24,6 +24,24 @@ env\Scripts\activate
 source env/bin/activate
 ```
 
+### Library Installation
+
+Install the `internetarchive` Python library and other necessary libraries if you haven't already, and the `tqdm` Python library:
+
+```bash
+pip install internetarchive tqdm
+```
+
+### Configure Internet Archive Access
+
+You might need to configure access to your Internet Archive account for some functionalities, like downloading restricted files. You can do this by running:
+
+```bash
+ia configure
+```
+
+Follow the prompts to enter your Archive.org email and password. This will save your credentials locally and allow the script to access the site as you.
+
 ## Scripts Overview
 
 ### 1. `download_archive_collection.py`
