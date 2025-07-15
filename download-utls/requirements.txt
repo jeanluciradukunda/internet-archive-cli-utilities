@@ -1,0 +1,8 @@
+# Requirements for download-utls
+# These are the Python packages required for the download scripts
+
+# Required for progress bars (optional but recommended)
+tqdm>=4.60.0
+
+# Required for Internet Archive API access
+internetarchive>=3.0.0
